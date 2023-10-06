@@ -1,0 +1,108 @@
+html, body {
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  background-image:url("fond.jpg");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+div#container {
+  width:100%;
+  height:100%;
+  display:flex;
+	flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+div#logo {
+	height:30vh;
+	width:100%;
+  background-image:url("logo.png");
+  background-size:contain;
+  background-position:center left;
+  background-repeat:no-repeat;
+}
+
+
+
+
+div#overlay {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.4);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+div#overlay.active {
+  display:flex;
+}
+
+div#modal {
+  width:80%;
+  height:80%;
+  background-color:white;
+  border-radius:20px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+
+div#modal section {
+  margin-top:30px;
+  font-size:24px;
+  line-height:60px;
+}
+
+
+
+/*###################
+#### Date picker ####
+###################*/
+div#go {
+  height:50vh;
+	width:30%;
+  display:flex;
+	flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+div#go h2 {
+  color:white;
+  font-size:6vh;
+  margin-bottom:100px;
+	font-variant:small-caps;
+}
+
+div#go input {
+  height:60px;
+  font-size:30px;
+}
+
+
+
+div#go button {
+  margin-top:100px;
+  height:80px;
+  width:180px;
+  font-size:46px;
+  font-family:  Arial, sans-serif;
+}
+
+div#go button i {
+  font-size:40px;
+  vertical-align:3px;
+  transform:rotate(30deg);
+}
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Coincidences</title>
+    <base href="https://mmi-lyon.fr/apps-hasard/coincidences/" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/bootstrap-datepicker3.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <meta name="theme-color" content="black" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo"></div>
+      <div id="go">
+        <h2>Choisissez une date</h2>
+        <div class="input-group date input-group-lg">
+          <input
+            type="text"
+            class="form-control date-picker"
+            placeholder="dd/mm/yyyy"
+          />
+          <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+        </div>
+
+        <button type="button" class="btn btn-info btn-lg">
+          G<i class="fa fa-clock-o"></i> !
+        </button>
+      </div>
+    </div>
+    <div id="overlay">
+      <div id="modal">
+        <h2></h2>
+        <section></section>
+      </div>
+    </div>
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("sw.js")
+            .then(function (registration) {
+              console.log("Registration succeeded. You can now go offline");
+            });
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+    <script
+      type="text/javascript"
+      src="js/bootstrap-datepicker.fr.min.js"
+    ></script>
+    <script type="text/javascript" src="js/moment.min.js"></script>
+    <script type="text/javascript" src="js/moment-with-locale.min.js"></script>
+    <script type="text/javascript" src="js/events.js"></script>
+    <script type="text/javascript" src="js/numbers.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>

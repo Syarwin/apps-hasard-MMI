@@ -1,0 +1,20 @@
+{
+  "name": "Coïncidences",
+  "short_name": "Coïncidences",
+  "start_url": "/timothee.pecatte/hasard/coincidences/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://mmi-lyon.fr/apps-hasard/coincidences/css/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://mmi-lyon.fr/apps-hasard/coincidences/css/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "black",
+  "theme_color": "black"
+}
