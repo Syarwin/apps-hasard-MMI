@@ -1,0 +1,158 @@
+html, body {
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  background-image:url("fond.jpg");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+  overflow:hidden;
+}
+
+div#container {
+  width:100%;
+  height:100%;
+  display:flex;
+	flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+  margin-top:0%;
+  transition:margin 1s;
+}
+
+div#instructions {
+  margin-top:-14vh;
+  width:60%;
+  color:white;
+  font-size:2.7vh;
+  text-align:justify;
+}
+
+div#exemples {
+  width:80%;
+  color:white;
+  font-size:2.7vh;
+  margin-bottom:100px;
+  text-align:justify;
+  display:flex;
+  flex-flow:row;
+}
+
+div#exemple_fougere {
+  flex-basis:25%;
+  flex-shrink:0;
+  background:url("fougere.png");
+  background-size:contain;
+  background-position: center center;
+  background-color:white;
+  background-repeat:no-repeat;
+  border-radius:20px;
+  margin-left:3vw;
+}
+
+div#logo {
+	height:35vh;
+	width:100%;
+  background-image:url("logo.png");
+  background-size:contain;
+  background-position:center left;
+  background-repeat:no-repeat;
+}
+
+
+
+
+div#result {
+  width:100%;
+  height:100%;
+  display:flex;
+  position:relative;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  z-index:1000002;
+  background-color:rgba(255,255,255,0.4);
+}
+
+
+div#result i {
+  position:absolute;
+  display:block;
+  top:10px;
+  right:10px;
+  width:10vh;
+  height:10vh;
+  font-size:10vh;
+  color:white;
+  cursor:pointer;
+  opacity:0;
+  transition:opacity 1s;
+}
+
+div#result h2 {
+  transition:opacity 1s;
+}
+
+
+div#renderer {
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+/*###################
+#### Date picker ####
+###################*/
+div#go {
+  height:20vh;
+	width:50%;
+}
+
+div#go form {
+  height:100%;
+  width:100%;
+  margin:0;
+  padding:0;
+  display:flex;
+	flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+div#go h2 {
+  color:white;
+  font-size:6vh;
+  margin-bottom:100px;
+	font-variant:small-caps;
+}
+
+div#go input {
+  height:60px;
+  font-size:30px;
+  border-radius:1vh;
+}
+
+
+
+div#go button {
+  margin-top:-20px;
+  height:80px;
+  width:180px;
+  font-size:46px;
+  font-family:  Arial, sans-serif;
+}
+
+div#go button i {
+  font-size:40px;
+  vertical-align:3px;
+  transition:transform 3s;
+}
+
+div#go button:hover i {
+  transform:rotate(360deg);
+}

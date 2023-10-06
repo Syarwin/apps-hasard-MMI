@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <title>Fractales</title>
+    <base href="https://mmi-lyon.fr/apps-hasard/fractales/" />
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/font-awesome.css" />
+    <link rel="stylesheet" href="css/hint.min.css" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <meta name="theme-color" content="black" />
+    <link rel="manifest" href="manifest.json" />
+  </head>
+  <body>
+    <div id="container">
+      <div id="logo"></div>
+      <div id="instructions">
+        Entrez votre pseudo/prénom/nom ci-dessous et appuyez sur « Go ». Vous
+        n’aurez alors plus qu’à choisir un point de départ d’une suite de point
+        semblant être placés de manière chaotique… et pourtant une forme
+        émerge !
+      </div>
+
+      <div id="go">
+        <form id="form-word">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-5">
+                <div
+                  class="input-group input-group-lg"
+                  style="display: inline-block"
+                >
+                  <input type="text" class="form-control" id="word" />
+                  <span
+                    class="hint--right hint--medium hint--always hint--info"
+                    aria-label="Mot de 3 à 8 lettres conseillé"
+                  ></span>
+                </div>
+              </div>
+              <div class="col-md-7">
+                <button type="submit" class="btn btn-info btn-lg" id="render">
+                  G<i class="fa fa-cog"></i> !
+                </button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+
+      <div id="exemples">
+        <div>
+          Votre pseudo fractalisé est généré en traçant une succession d’environ
+          un million de points tirés au hasard. Au hasard, oui, mais pas
+          n’importe comment ! A chaque étape, un nouveau point est tracé au
+          hasard selon une loi de probabilité qui dépend de la position du point
+          précédent ainsi que des lettres composants votre pseudo. Après un
+          grand nombre d’étapes, en moyenne, on observe que les points ont
+          tendance à se concentrer autour d’une forme fractale prédéterminée par
+          les lois du hasards configurées par votre pseudo. Cette méthode a été
+          initialement introduite par le mathématicien Michael Barnsley sous le
+          nom de "jeu du chaos" pour créer rapidement et simplement des
+          fractales comme la fougère de Barnsley qui porte son nom.
+        </div>
+        <div id="exemple_fougere"></div>
+      </div>
+    </div>
+    <div id="result">
+      <i class="fa fa-arrow-circle-up" id="arrow-back"></i>
+      <h2 id="instructions_depart">
+        Cliquez sur le point de départ (dans la zone bleue) :
+      </h2>
+      <div id="renderer"></div>
+    </div>
+
+    <script type="text/javascript">
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("sw.js")
+            .then(function (registration) {
+              console.log("Registration succeeded. You can now go offline");
+            });
+        });
+      }
+    </script>
+
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/d3-quadtree.min.js"></script>
+    <script type="text/javascript" src="js/lettres.json"></script>
+    <script type="text/javascript" src="js/dico.js"></script>
+    <script type="text/javascript" src="js/classes.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
