@@ -1,0 +1,169 @@
+html, body {
+  padding:0;
+  margin:0;
+  width:100%;
+  height:100%;
+  background-image:url("fond.jpg");
+  background-size:cover;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+
+div#container {
+  width:100%;
+  height:100%;
+  display:flex;
+	flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+}
+
+div#logo {
+	height:30vh;
+	width:100%;
+  background-image:url("logo.png");
+  background-size:contain;
+  background-position:center left;
+  background-repeat:no-repeat;
+}
+
+
+
+
+div#overlay {
+  position:absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(0,0,0,0.4);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+}
+div#overlay.active {
+  display:flex;
+}
+
+div#overlay > i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 10vh;
+  margin-top: -5vh;
+  margin-left: -5vh;
+  transition: transform 5s linear;
+  transform:rotate(0deg);
+  color:white;
+}
+
+
+div#modal {
+  width:80%;
+  height:80%;
+  background-color:white;
+  border-radius:20px;
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  position:relative;
+}
+div#modal.active {
+  display:flex;
+}
+
+
+@font-face {
+  font-family: 'Aver';
+  src: url('../fonts/Aver.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+div#modal section {
+  padding:5vh;
+  font-family:Aver;
+  font-size:3vh;
+  line-height:5vh;
+  text-align:justify;
+}
+
+div#modal div#smileys {
+  width:100%;
+  height:25%;
+  display:flex;
+}
+
+div#modal div#smileys div {
+  width:20%;
+  height:100%;
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center center;
+  cursor:pointer;
+}
+
+
+div#modal div#smileys div#smiley_0 { background-image:url("smiley_0.png"); }
+div#modal div#smileys div#smiley_1 { background-image:url("smiley_1.png"); }
+div#modal div#smileys div#smiley_2 { background-image:url("smiley_2.png"); }
+div#modal div#smileys div#smiley_3 { background-image:url("smiley_3.png"); }
+div#modal div#smileys div#smiley_4 { background-image:url("smiley_4.png"); }
+
+
+div#modal > i {
+  position: absolute;
+  display:block;
+  top: 0;
+  right: 0;
+  font-size: 10vh;
+  margin-top: -2.5vh;
+  margin-right: -1.7vh;
+  color:rgb(0,0,190);
+  cursor:pointer;
+}
+
+
+
+/*###################
+#### Date picker ####
+###################*/
+div#go {
+  height:50vh;
+	width:30%;
+  display:flex;
+	flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+div#go h2 {
+  color:white;
+  font-size:6vh;
+  margin-bottom:100px;
+	font-variant:small-caps;
+}
+
+div#go input {
+  height:60px;
+  font-size:30px;
+}
+
+
+
+div#go button {
+  margin-top:100px;
+  height:80px;
+  width:180px;
+  font-size:46px;
+  font-family:  Arial, sans-serif;
+}
+
+div#go button i {
+  font-size:40px;
+  vertical-align:3px;
+  transform:rotate(30deg);
+}
+

@@ -1,0 +1,20 @@
+{
+  "name": "Bonne Aventure",
+  "short_name": "Horoscope",
+  "start_url": "/timothee.pecatte/hasard/barnum/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "https://mmi-lyon.fr/apps-hasard/barnum/css/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "https://mmi-lyon.fr/apps-hasard/barnum/css/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ],
+  "background_color": "black",
+  "theme_color": "black"
+}
